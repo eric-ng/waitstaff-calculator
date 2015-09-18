@@ -21,6 +21,34 @@ body > div {
 	text-align: center;
 }
 
+.view-wrapper {
+	position: relative;
+}
+.view-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	-webkit-transition: 1s linear all;
+	-moz-transition: 1s linear all;
+	-ms-transition: 1s linear all;
+	-o-transition: 1s linear all;
+	transition: 1s linear all;
+}
+.view-container.ng-enter {
+	opacity: 0;
+}
+.view-container.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+.view-container.ng-leave {
+	opacity: 1;
+}
+.view-container.ng-leave.ng-leave-active {
+	opacity: 0;
+}
+
 .container {
 	vertical-align: top;
 }
