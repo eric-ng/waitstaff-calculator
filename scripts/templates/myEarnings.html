@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="output-container">
+		<div class="header">My Earnings Info</div>
+		<div class="content-container">
+			<div class="cols label">Tip Total $</div>
+			<div class="cols value">{{tipTotal | number:2}}</div>
+			<div class="cols label">Meal Count</div>
+			<div class="cols value">{{mealCount}}</div>
+			<hr>
+			<div class="cols label">Avg. Tip/Meal $</div>
+			<div class="cols value">{{(tipTotal/mealCount || 0) | number:2}}</div>
+		</div>
+	</div>
+	<div class="reset-container">
+		<button ng-click="reset();">Reset</button>
+	</div>
+</div>

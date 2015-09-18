@@ -12,47 +12,56 @@ header {
 	text-align: center;
 	font-size: 60px;
 }
+header .menu {
+	font-size: 1.2rem;
+	padding: 15px 0px 20px 0px;
+}
 
 body > div {
 	text-align: center;
 }
 
-.col-container {
-	display: inline-block;
+.container {
 	vertical-align: top;
 }
-.col-container .header {
+.container .header {
 	border-bottom: 1px solid #A0A0A0;
 	font-size: 20px;
 	padding: 15px 28px;
 }
-.col-container .content-container {
+.container .content-container {
 	padding: 20px;
 	font-size: 0;
 }
-.col-container .content-container .cols {
+.container .content-container .cols {
 	width: 48%;
 	display: inline-block;
 	margin: 10px auto;
 	padding: 0px 1%;
 }
-.col-container .content-container .label {
+.container .content-container .label {
 	font-size: 1rem;
 	text-align: right;
 }
-.col-container .content-container .value {
+.container .content-container .value {
 	font-size: 1rem;
 	text-align: left;
 }
-.col-container .content-container .buttons-container {
+.container .content-container .buttons-container {
 	margin-top: 25px;
 }
 
-.meal-container {
-	width: 550px;
-	margin: 25px;
+.home-container {
+	width: 700px;
+	margin: 25px auto;
+	text-align: left;
 }
-.meal-container > div {
+
+.meal-container, .customer-container {
+	width: 550px;
+	margin: 25px auto;
+}
+.meal-container > div, .customer-container > div {
 	border: 2px solid #808080;
 }
 .meal-container .error-container {
@@ -65,15 +74,12 @@ body > div {
 	font-size: 1rem;
 }
 
-.output-container {
+.output-container, .reset-container {
 	width: 350px;
-	margin: 25px;
+	margin: 25px auto;
 }
 .output-container > div {
 	border: 2px solid #808080;
-}
-.output-container > div:first-child {
-	margin-bottom: 20px;
 }
 
 .reset-container {

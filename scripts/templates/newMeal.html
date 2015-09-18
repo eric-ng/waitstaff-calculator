@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="meal-container">
+		<div class="header">Enter the Meal Details</div>
+		<div class="content-container">
+			<form name="inputForm" ng-submit="submit();">
+				<div class="cols label">Base Meal Price: $ </div>
+				<div class="cols value">
+					<input ng-model="mealPrice" name="mealPrice" required ng-pattern="numberMatching">
+				</div>
+				<div class="cols label">Tax Rate: % </div>
+				<div class="cols value">
+					<input ng-model="taxRate" name="taxRate" required ng-pattern="numberMatching">
+				</div>
+				<div class="cols label">Tip Percentage: % </div>
+				<div class="cols value">
+					<input ng-model="tipPercentage" name="tipPercentage" required ng-pattern="numberMatching">
+				</div>
+
+				<div class="buttons-container">
+					<button type="submit">Submit</button>
+					<input type="button" ng-click="cancel();" value="cancel"></input>
+				</div>
+				<div class="error-container" ng-show="inputForm.$submitted && (inputForm.mealPrice.$error.pattern || inputForm.taxRate.$error.pattern || inputForm.tipPercentage.$error.pattern)">
+					Values are required to be numbers.  
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="customer-container">
+		<div class="header">Customer Charges</div>
+		<div class="content-container">
+			<div class="cols label">Subtotal $</div>
+			<div class="cols value">{{customerSubtotal | number:2}}</div>
+			<div class="cols label">Tip $</div>
+			<div class="cols value">{{customerTip | number:2}}</div>
+			<hr>
+			<div class="cols label">Total $</div>
+			<div class="cols value">{{customerSubtotal + customerTip | number:2}}</div>
+		</div>
+	</div>
+</div>
